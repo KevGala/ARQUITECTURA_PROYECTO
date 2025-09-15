@@ -57,7 +57,7 @@ extern volatile uint32_t * const gpio35;
 /************************************************
 DECLARACIÓN DE MACROS.
  ************************************************/
-/* Habilita GPIO como salida. */
+/* Habilita GPIO como salida. (1 << B) */  
 #define GPIO_ENABLE_OUTPUT_BIT(B)	if(B<31) /* GPIO 0-31*/ *gpio_enable |= (int)pow((double)2,(double)B); \
 									else /* GPIO 32-39*/ *gpio_enable1 |= (int)pow((double)2,(double)B);
 /* Desabilita GPIO como salida. */
